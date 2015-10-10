@@ -1,0 +1,632 @@
+[ {
+  "nodes" : [ {
+    "@id" : "_:60416"
+  }, {
+    "@id" : "_:60415"
+  }, {
+    "@id" : "_:60414"
+  }, {
+    "@id" : "_:60413"
+  }, {
+    "@id" : "_:60412"
+  }, {
+    "@id" : "_:60411"
+  }, {
+    "@id" : "_:60410"
+  }, {
+    "@id" : "_:60409"
+  }, {
+    "@id" : "_:60408"
+  }, {
+    "@id" : "_:60407"
+  }, {
+    "@id" : "_:60406"
+  } ]
+}, {
+  "edges" : [ {
+    "@id" : "_:60426",
+    "s" : "_:60415",
+    "t" : "_:60416"
+  }, {
+    "@id" : "_:60425",
+    "s" : "_:60415",
+    "t" : "_:60412"
+  }, {
+    "@id" : "_:60424",
+    "s" : "_:60415",
+    "t" : "_:60408"
+  }, {
+    "@id" : "_:60423",
+    "s" : "_:60415",
+    "t" : "_:60409"
+  }, {
+    "@id" : "_:60422",
+    "s" : "_:60415",
+    "t" : "_:60410"
+  }, {
+    "@id" : "_:60421",
+    "s" : "_:60414",
+    "t" : "_:60415"
+  }, {
+    "@id" : "_:60420",
+    "s" : "_:60413",
+    "t" : "_:60415"
+  }, {
+    "@id" : "_:60419",
+    "s" : "_:60411",
+    "t" : "_:60415"
+  }, {
+    "@id" : "_:60418",
+    "s" : "_:60407",
+    "t" : "_:60415"
+  }, {
+    "@id" : "_:60417",
+    "s" : "_:60406",
+    "t" : "_:60415"
+  } ]
+}, {
+  "cartesianLayout" : [ {
+    "node" : "_:60416",
+    "view" : "60396",
+    "x" : 172.16278663763222,
+    "y" : 310.43561028127453
+  }, {
+    "node" : "_:60415",
+    "view" : "60396",
+    "x" : 106.5,
+    "y" : 159.5
+  }, {
+    "node" : "_:60414",
+    "view" : "60396",
+    "x" : 136.5,
+    "y" : -152.5
+  }, {
+    "node" : "_:60413",
+    "view" : "60396",
+    "x" : -107.5,
+    "y" : 369.5
+  }, {
+    "node" : "_:60412",
+    "view" : "60396",
+    "x" : 270.3933924607787,
+    "y" : 144.264649406819
+  }, {
+    "node" : "_:60411",
+    "view" : "60396",
+    "x" : 272.5,
+    "y" : 397.5
+  }, {
+    "node" : "_:60410",
+    "view" : "60396",
+    "x" : -35.91961148369916,
+    "y" : 76.9784012222728
+  }, {
+    "node" : "_:60409",
+    "view" : "60396",
+    "x" : 143.21647212022924,
+    "y" : -0.9526742533275012
+  }, {
+    "node" : "_:60408",
+    "view" : "60396",
+    "x" : -16.375830233276815,
+    "y" : 269.020273668773
+  }, {
+    "node" : "_:60407",
+    "view" : "60396",
+    "x" : -163.5,
+    "y" : 17.5
+  }, {
+    "node" : "_:60406",
+    "view" : "60396",
+    "x" : 430.5,
+    "y" : 41.5
+  } ]
+}, {
+  "networkAttributes" : [ {
+    "s" : "_:60396",
+    "n" : "shared name",
+    "v" : "George_Love_Life"
+  }, {
+    "s" : "_:60396",
+    "n" : "name",
+    "v" : "George_Love_Life"
+  }, {
+    "s" : "_:60396",
+    "n" : "__Annotations",
+    "v" : ""
+  } ]
+}, {
+  "nodeAttributes" : [ {
+    "s" : "60396",
+    "po" : "_:60416",
+    "n" : "shared name",
+    "v" : "Katy"
+  }, {
+    "s" : "60396",
+    "po" : "_:60416",
+    "n" : "name",
+    "v" : "Katy"
+  }, {
+    "s" : "60396",
+    "po" : "_:60416",
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : "60396",
+    "po" : "_:60415",
+    "n" : "shared name",
+    "v" : "George"
+  }, {
+    "s" : "60396",
+    "po" : "_:60415",
+    "n" : "name",
+    "v" : "George"
+  }, {
+    "s" : "60396",
+    "po" : "_:60415",
+    "n" : "degree.layout",
+    "v" : "8",
+    "d" : "integer"
+  }, {
+    "s" : "60396",
+    "po" : "_:60415",
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : "60396",
+    "po" : "_:60414",
+    "n" : "shared name",
+    "v" : "Alexis"
+  }, {
+    "s" : "60396",
+    "po" : "_:60414",
+    "n" : "name",
+    "v" : "Alexis"
+  }, {
+    "s" : "60396",
+    "po" : "_:60414",
+    "n" : "degree.layout",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : "60396",
+    "po" : "_:60414",
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : "60396",
+    "po" : "_:60413",
+    "n" : "shared name",
+    "v" : "Taylor"
+  }, {
+    "s" : "60396",
+    "po" : "_:60413",
+    "n" : "name",
+    "v" : "Taylor"
+  }, {
+    "s" : "60396",
+    "po" : "_:60413",
+    "n" : "degree.layout",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : "60396",
+    "po" : "_:60413",
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : "60396",
+    "po" : "_:60412",
+    "n" : "shared name",
+    "v" : "Yano"
+  }, {
+    "s" : "60396",
+    "po" : "_:60412",
+    "n" : "name",
+    "v" : "Yano"
+  }, {
+    "s" : "60396",
+    "po" : "_:60412",
+    "n" : "degree.layout",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : "60396",
+    "po" : "_:60412",
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : "60396",
+    "po" : "_:60411",
+    "n" : "shared name",
+    "v" : "Michelle"
+  }, {
+    "s" : "60396",
+    "po" : "_:60411",
+    "n" : "name",
+    "v" : "Michelle"
+  }, {
+    "s" : "60396",
+    "po" : "_:60411",
+    "n" : "degree.layout",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : "60396",
+    "po" : "_:60411",
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : "60396",
+    "po" : "_:60410",
+    "n" : "shared name",
+    "v" : "Lyna"
+  }, {
+    "s" : "60396",
+    "po" : "_:60410",
+    "n" : "name",
+    "v" : "Lyna"
+  }, {
+    "s" : "60396",
+    "po" : "_:60410",
+    "n" : "degree.layout",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : "60396",
+    "po" : "_:60410",
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : "60396",
+    "po" : "_:60409",
+    "n" : "shared name",
+    "v" : "Kirsty"
+  }, {
+    "s" : "60396",
+    "po" : "_:60409",
+    "n" : "name",
+    "v" : "Kirsty"
+  }, {
+    "s" : "60396",
+    "po" : "_:60409",
+    "n" : "degree.layout",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : "60396",
+    "po" : "_:60409",
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : "60396",
+    "po" : "_:60408",
+    "n" : "shared name",
+    "v" : "Kaileigh"
+  }, {
+    "s" : "60396",
+    "po" : "_:60408",
+    "n" : "name",
+    "v" : "Kaileigh"
+  }, {
+    "s" : "60396",
+    "po" : "_:60408",
+    "n" : "degree.layout",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : "60396",
+    "po" : "_:60408",
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : "60396",
+    "po" : "_:60407",
+    "n" : "shared name",
+    "v" : "Jazmin"
+  }, {
+    "s" : "60396",
+    "po" : "_:60407",
+    "n" : "name",
+    "v" : "Jazmin"
+  }, {
+    "s" : "60396",
+    "po" : "_:60407",
+    "n" : "degree.layout",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : "60396",
+    "po" : "_:60407",
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : "60396",
+    "po" : "_:60406",
+    "n" : "shared name",
+    "v" : "Justin"
+  }, {
+    "s" : "60396",
+    "po" : "_:60406",
+    "n" : "name",
+    "v" : "Justin"
+  }, {
+    "s" : "60396",
+    "po" : "_:60406",
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  } ]
+}, {
+  "edgeAttributes" : [ {
+    "s" : "60396",
+    "po" : "_:60426",
+    "n" : "shared name",
+    "v" : "George (interaction) Katy"
+  }, {
+    "s" : "60396",
+    "po" : "_:60426",
+    "n" : "name",
+    "v" : "George (interaction) Katy"
+  }, {
+    "s" : "60396",
+    "po" : "_:60426",
+    "n" : "interaction",
+    "v" : "interaction"
+  }, {
+    "s" : "60396",
+    "po" : "_:60426",
+    "n" : "shared interaction",
+    "v" : "interaction"
+  }, {
+    "s" : "60396",
+    "po" : "_:60426",
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : "60396",
+    "po" : "_:60425",
+    "n" : "shared name",
+    "v" : "George (interaction) Yano"
+  }, {
+    "s" : "60396",
+    "po" : "_:60425",
+    "n" : "name",
+    "v" : "George (interaction) Yano"
+  }, {
+    "s" : "60396",
+    "po" : "_:60425",
+    "n" : "interaction",
+    "v" : "interaction"
+  }, {
+    "s" : "60396",
+    "po" : "_:60425",
+    "n" : "shared interaction",
+    "v" : "interaction"
+  }, {
+    "s" : "60396",
+    "po" : "_:60425",
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : "60396",
+    "po" : "_:60424",
+    "n" : "shared name",
+    "v" : "George (interaction) Kaileigh"
+  }, {
+    "s" : "60396",
+    "po" : "_:60424",
+    "n" : "name",
+    "v" : "George (interaction) Kaileigh"
+  }, {
+    "s" : "60396",
+    "po" : "_:60424",
+    "n" : "interaction",
+    "v" : "interaction"
+  }, {
+    "s" : "60396",
+    "po" : "_:60424",
+    "n" : "shared interaction",
+    "v" : "interaction"
+  }, {
+    "s" : "60396",
+    "po" : "_:60424",
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : "60396",
+    "po" : "_:60423",
+    "n" : "shared name",
+    "v" : "George (undirected) Kirsti"
+  }, {
+    "s" : "60396",
+    "po" : "_:60423",
+    "n" : "name",
+    "v" : "George (undirected) Kirsti"
+  }, {
+    "s" : "60396",
+    "po" : "_:60423",
+    "n" : "interaction",
+    "v" : "undirected"
+  }, {
+    "s" : "60396",
+    "po" : "_:60423",
+    "n" : "shared interaction",
+    "v" : "undirected"
+  }, {
+    "s" : "60396",
+    "po" : "_:60423",
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : "60396",
+    "po" : "_:60422",
+    "n" : "shared name",
+    "v" : "George (undirected) Lyna"
+  }, {
+    "s" : "60396",
+    "po" : "_:60422",
+    "n" : "name",
+    "v" : "George (undirected) Lyna"
+  }, {
+    "s" : "60396",
+    "po" : "_:60422",
+    "n" : "interaction",
+    "v" : "undirected"
+  }, {
+    "s" : "60396",
+    "po" : "_:60422",
+    "n" : "shared interaction",
+    "v" : "undirected"
+  }, {
+    "s" : "60396",
+    "po" : "_:60422",
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : "60396",
+    "po" : "_:60421",
+    "n" : "shared name",
+    "v" : "Alexis (interaction) George"
+  }, {
+    "s" : "60396",
+    "po" : "_:60421",
+    "n" : "name",
+    "v" : "Alexis (interaction) George"
+  }, {
+    "s" : "60396",
+    "po" : "_:60421",
+    "n" : "interaction",
+    "v" : "interaction"
+  }, {
+    "s" : "60396",
+    "po" : "_:60421",
+    "n" : "shared interaction",
+    "v" : "interaction"
+  }, {
+    "s" : "60396",
+    "po" : "_:60421",
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : "60396",
+    "po" : "_:60420",
+    "n" : "shared name",
+    "v" : "Taylor (interaction) George"
+  }, {
+    "s" : "60396",
+    "po" : "_:60420",
+    "n" : "name",
+    "v" : "Taylor (interaction) George"
+  }, {
+    "s" : "60396",
+    "po" : "_:60420",
+    "n" : "interaction",
+    "v" : "interaction"
+  }, {
+    "s" : "60396",
+    "po" : "_:60420",
+    "n" : "shared interaction",
+    "v" : "interaction"
+  }, {
+    "s" : "60396",
+    "po" : "_:60420",
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : "60396",
+    "po" : "_:60419",
+    "n" : "shared name",
+    "v" : "Michelle (interaction) George"
+  }, {
+    "s" : "60396",
+    "po" : "_:60419",
+    "n" : "name",
+    "v" : "Michelle (interaction) George"
+  }, {
+    "s" : "60396",
+    "po" : "_:60419",
+    "n" : "interaction",
+    "v" : "interaction"
+  }, {
+    "s" : "60396",
+    "po" : "_:60419",
+    "n" : "shared interaction",
+    "v" : "interaction"
+  }, {
+    "s" : "60396",
+    "po" : "_:60419",
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : "60396",
+    "po" : "_:60418",
+    "n" : "shared name",
+    "v" : "Jazmin (interaction) George"
+  }, {
+    "s" : "60396",
+    "po" : "_:60418",
+    "n" : "name",
+    "v" : "Jazmin (interaction) George"
+  }, {
+    "s" : "60396",
+    "po" : "_:60418",
+    "n" : "interaction",
+    "v" : "interaction"
+  }, {
+    "s" : "60396",
+    "po" : "_:60418",
+    "n" : "shared interaction",
+    "v" : "interaction"
+  }, {
+    "s" : "60396",
+    "po" : "_:60418",
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : "60396",
+    "po" : "_:60417",
+    "n" : "shared name",
+    "v" : "Justin (interaction) George"
+  }, {
+    "s" : "60396",
+    "po" : "_:60417",
+    "n" : "name",
+    "v" : "Justin (interaction) George"
+  }, {
+    "s" : "60396",
+    "po" : "_:60417",
+    "n" : "interaction",
+    "v" : "interaction"
+  }, {
+    "s" : "60396",
+    "po" : "_:60417",
+    "n" : "shared interaction",
+    "v" : "interaction"
+  }, {
+    "s" : "60396",
+    "po" : "_:60417",
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  } ]
+} ]
