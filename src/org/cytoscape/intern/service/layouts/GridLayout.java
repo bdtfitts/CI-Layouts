@@ -1,42 +1,20 @@
 package org.cytoscape.intern.service.layouts;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 import org.cxio.aspects.datamodels.CartesianLayoutElement;
 import org.cxio.aspects.datamodels.NodesElement;
 import org.cxio.core.CxReader;
 import org.cxio.core.CxWriter;
-import org.cxio.core.interfaces.AspectElement;
 
 public class GridLayout extends AbstractLayout {
 
+	//TODO make these values modifiable from service parameters
 	private static final double NODE_VERTICAL_SPACING = 80d;
 	private static final double NODE_HORIZONTAL_SPACING = 100d;
 	
-	private ArrayList<NodesElement> nodesToLayOut;
-	
 	public GridLayout(CxReader cxNodeReader, CxWriter cxLayoutWriter) {
 		super(cxNodeReader, cxLayoutWriter);
-		
-		nodesToLayOut = retrieveNodeElements();
-	}
-	private ArrayList<NodesElement> retrieveNodeElements() {
-		ArrayList<NodesElement> nodes = new ArrayList<NodesElement>();
-		try {
-			while (cxNodeReader.hasNext()) {
-				List<AspectElement> aspectElements = cxNodeReader.getNext();
-				for (AspectElement element : aspectElements) {
-					if (element.getAspectName().equals(NodesElement.NAME)) {
-						nodes.add((NodesElement)element);
-					}
-				}
-			}
-		} catch (IOException e) {
-			throw new RuntimeException("I/O Exception while reading CX file.");
-		}
-		return nodes;
 	}
 	@Override
 	public void apply() {

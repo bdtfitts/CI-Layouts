@@ -20,13 +20,17 @@ import org.cxio.core.interfaces.AspectFragmentReader;
 import org.cxio.core.interfaces.AspectFragmentWriter;
 import org.cytoscape.intern.service.layouts.GridLayout;
 import org.cytoscape.intern.service.layouts.LayoutAlgorithm;
+import org.cytoscape.intern.service.layouts.StackedNodeLayout;
 
 public class LayoutService {
+	
+	private static final String GRID_LAYOUT = "grid";
+	private static final String STACKED_LAYOUT = "stacked";
 
 	private static void applyLayout(LayoutAlgorithm layout) {
 		layout.apply();
 	}
-	public static void run(InputStream cxInput) {
+	public static void run(InputStream cxInput, String algorithm) {
 
 		NodesFragmentReader nodesFragmentReader = NodesFragmentReader.createInstance();
 		EdgesFragmentReader edgesFragmentReader = EdgesFragmentReader.createInstance();
@@ -54,8 +58,20 @@ public class LayoutService {
 		try {
 			CxReader cxReader = CxReader.createInstance(cxInput, new HashSet<AspectFragmentReader>(readers));
 			CxWriter cxWriter = CxWriter.createInstance(outputFileStream, true, new HashSet<AspectFragmentWriter>(writers));
-			
-			applyLayout(new GridLayout(cxReader, cxWriter));
+			System.out.println("Applying layout...");
+			switch (algorithm) {
+				case GRID_LAYOUT: {
+					applyLayout(new GridLayout(cxReader, cxWriter));
+					break;
+				}
+				case STACKED_LAYOUT: {
+					applyLayout(new StackedNodeLayout(cxReader, cxWriter));
+					break;
+				}
+				default: {
+					break;
+				}
+			}
 
 			outputFileStream.flush();
 			outputFileStream.close();
@@ -64,9 +80,14 @@ public class LayoutService {
 		}
 	}
 	public static void main(String[] args) {
-		InputStream cxInput = ClassLoader.getSystemResourceAsStream("resources/cxInput.cx");
-		System.out.println("Applying gridlayout on network found in cxInput.cx...");
-		run(cxInput);
+		if (args.length != 2) {
+			throw new IllegalArgumentException("Usage: java LayoutService [input file] [layout algorithm]");
+		}
+		String inputFilePath = args[0];
+		String algorithm = args[1];
+		InputStream cxInput = ClassLoader.getSystemResourceAsStream(inputFilePath);
+		System.out.println("Applying gridlayout on network found in " + inputFilePath );
+		run(cxInput, algorithm);
 		System.out.println("Grid layout created.");
 	}
 

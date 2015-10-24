@@ -1,632 +1,781 @@
 [ {
   "nodes" : [ {
-    "@id" : "_:60416"
+    "@id" : "_:119"
   }, {
-    "@id" : "_:60415"
+    "@id" : "_:118"
   }, {
-    "@id" : "_:60414"
+    "@id" : "_:117"
   }, {
-    "@id" : "_:60413"
+    "@id" : "_:116"
   }, {
-    "@id" : "_:60412"
+    "@id" : "_:115"
   }, {
-    "@id" : "_:60411"
+    "@id" : "_:114"
   }, {
-    "@id" : "_:60410"
+    "@id" : "_:113"
   }, {
-    "@id" : "_:60409"
+    "@id" : "_:112"
   }, {
-    "@id" : "_:60408"
+    "@id" : "_:111"
   }, {
-    "@id" : "_:60407"
+    "@id" : "_:110"
   }, {
-    "@id" : "_:60406"
+    "@id" : "_:109"
   } ]
 }, {
   "edges" : [ {
-    "@id" : "_:60426",
-    "s" : "_:60415",
-    "t" : "_:60416"
+    "@id" : "_:129",
+    "s" : "_:118",
+    "t" : "_:119"
   }, {
-    "@id" : "_:60425",
-    "s" : "_:60415",
-    "t" : "_:60412"
+    "@id" : "_:128",
+    "s" : "_:118",
+    "t" : "_:115"
   }, {
-    "@id" : "_:60424",
-    "s" : "_:60415",
-    "t" : "_:60408"
+    "@id" : "_:127",
+    "s" : "_:118",
+    "t" : "_:111"
   }, {
-    "@id" : "_:60423",
-    "s" : "_:60415",
-    "t" : "_:60409"
+    "@id" : "_:126",
+    "s" : "_:118",
+    "t" : "_:112"
   }, {
-    "@id" : "_:60422",
-    "s" : "_:60415",
-    "t" : "_:60410"
+    "@id" : "_:125",
+    "s" : "_:118",
+    "t" : "_:113"
   }, {
-    "@id" : "_:60421",
-    "s" : "_:60414",
-    "t" : "_:60415"
+    "@id" : "_:124",
+    "s" : "_:117",
+    "t" : "_:118"
   }, {
-    "@id" : "_:60420",
-    "s" : "_:60413",
-    "t" : "_:60415"
+    "@id" : "_:123",
+    "s" : "_:116",
+    "t" : "_:118"
   }, {
-    "@id" : "_:60419",
-    "s" : "_:60411",
-    "t" : "_:60415"
+    "@id" : "_:122",
+    "s" : "_:114",
+    "t" : "_:118"
   }, {
-    "@id" : "_:60418",
-    "s" : "_:60407",
-    "t" : "_:60415"
+    "@id" : "_:121",
+    "s" : "_:110",
+    "t" : "_:118"
   }, {
-    "@id" : "_:60417",
-    "s" : "_:60406",
-    "t" : "_:60415"
-  } ]
-}, {
-  "cartesianLayout" : [ {
-    "node" : "_:60416",
-    "view" : "60396",
-    "x" : 172.16278663763222,
-    "y" : 310.43561028127453
-  }, {
-    "node" : "_:60415",
-    "view" : "60396",
-    "x" : 106.5,
-    "y" : 159.5
-  }, {
-    "node" : "_:60414",
-    "view" : "60396",
-    "x" : 136.5,
-    "y" : -152.5
-  }, {
-    "node" : "_:60413",
-    "view" : "60396",
-    "x" : -107.5,
-    "y" : 369.5
-  }, {
-    "node" : "_:60412",
-    "view" : "60396",
-    "x" : 270.3933924607787,
-    "y" : 144.264649406819
-  }, {
-    "node" : "_:60411",
-    "view" : "60396",
-    "x" : 272.5,
-    "y" : 397.5
-  }, {
-    "node" : "_:60410",
-    "view" : "60396",
-    "x" : -35.91961148369916,
-    "y" : 76.9784012222728
-  }, {
-    "node" : "_:60409",
-    "view" : "60396",
-    "x" : 143.21647212022924,
-    "y" : -0.9526742533275012
-  }, {
-    "node" : "_:60408",
-    "view" : "60396",
-    "x" : -16.375830233276815,
-    "y" : 269.020273668773
-  }, {
-    "node" : "_:60407",
-    "view" : "60396",
-    "x" : -163.5,
-    "y" : 17.5
-  }, {
-    "node" : "_:60406",
-    "view" : "60396",
-    "x" : 430.5,
-    "y" : 41.5
+    "@id" : "_:120",
+    "s" : "_:109",
+    "t" : "_:118"
   } ]
 }, {
   "networkAttributes" : [ {
-    "s" : "_:60396",
+    "s" : "_:99",
     "n" : "shared name",
     "v" : "George_Love_Life"
   }, {
-    "s" : "_:60396",
+    "s" : "_:99",
     "n" : "name",
     "v" : "George_Love_Life"
   }, {
-    "s" : "_:60396",
+    "s" : "_:99",
     "n" : "__Annotations",
-    "v" : ""
+    "v" : [ "" ],
+    "d" : "list_of_string"
   } ]
 }, {
   "nodeAttributes" : [ {
-    "s" : "60396",
-    "po" : "_:60416",
+    "s" : "99",
+    "po" : "_:119",
     "n" : "shared name",
     "v" : "Katy"
   }, {
-    "s" : "60396",
-    "po" : "_:60416",
+    "s" : "99",
+    "po" : "_:119",
     "n" : "name",
     "v" : "Katy"
   }, {
-    "s" : "60396",
-    "po" : "_:60416",
+    "s" : "99",
+    "po" : "_:119",
     "n" : "selected",
     "v" : "false",
     "d" : "boolean"
   }, {
-    "s" : "60396",
-    "po" : "_:60415",
+    "s" : "99",
+    "po" : "_:118",
     "n" : "shared name",
     "v" : "George"
   }, {
-    "s" : "60396",
-    "po" : "_:60415",
+    "s" : "99",
+    "po" : "_:118",
     "n" : "name",
     "v" : "George"
   }, {
-    "s" : "60396",
-    "po" : "_:60415",
+    "s" : "99",
+    "po" : "_:118",
     "n" : "degree.layout",
     "v" : "8",
     "d" : "integer"
   }, {
-    "s" : "60396",
-    "po" : "_:60415",
+    "s" : "99",
+    "po" : "_:118",
     "n" : "selected",
     "v" : "false",
     "d" : "boolean"
   }, {
-    "s" : "60396",
-    "po" : "_:60414",
+    "s" : "99",
+    "po" : "_:117",
     "n" : "shared name",
     "v" : "Alexis"
   }, {
-    "s" : "60396",
-    "po" : "_:60414",
+    "s" : "99",
+    "po" : "_:117",
     "n" : "name",
     "v" : "Alexis"
   }, {
-    "s" : "60396",
-    "po" : "_:60414",
+    "s" : "99",
+    "po" : "_:117",
     "n" : "degree.layout",
     "v" : "1",
     "d" : "integer"
   }, {
-    "s" : "60396",
-    "po" : "_:60414",
+    "s" : "99",
+    "po" : "_:117",
     "n" : "selected",
     "v" : "false",
     "d" : "boolean"
   }, {
-    "s" : "60396",
-    "po" : "_:60413",
+    "s" : "99",
+    "po" : "_:116",
     "n" : "shared name",
     "v" : "Taylor"
   }, {
-    "s" : "60396",
-    "po" : "_:60413",
+    "s" : "99",
+    "po" : "_:116",
     "n" : "name",
     "v" : "Taylor"
   }, {
-    "s" : "60396",
-    "po" : "_:60413",
+    "s" : "99",
+    "po" : "_:116",
     "n" : "degree.layout",
     "v" : "1",
     "d" : "integer"
   }, {
-    "s" : "60396",
-    "po" : "_:60413",
+    "s" : "99",
+    "po" : "_:116",
     "n" : "selected",
     "v" : "false",
     "d" : "boolean"
   }, {
-    "s" : "60396",
-    "po" : "_:60412",
+    "s" : "99",
+    "po" : "_:115",
     "n" : "shared name",
     "v" : "Yano"
   }, {
-    "s" : "60396",
-    "po" : "_:60412",
+    "s" : "99",
+    "po" : "_:115",
     "n" : "name",
     "v" : "Yano"
   }, {
-    "s" : "60396",
-    "po" : "_:60412",
+    "s" : "99",
+    "po" : "_:115",
     "n" : "degree.layout",
     "v" : "1",
     "d" : "integer"
   }, {
-    "s" : "60396",
-    "po" : "_:60412",
+    "s" : "99",
+    "po" : "_:115",
     "n" : "selected",
     "v" : "false",
     "d" : "boolean"
   }, {
-    "s" : "60396",
-    "po" : "_:60411",
+    "s" : "99",
+    "po" : "_:114",
     "n" : "shared name",
     "v" : "Michelle"
   }, {
-    "s" : "60396",
-    "po" : "_:60411",
+    "s" : "99",
+    "po" : "_:114",
     "n" : "name",
     "v" : "Michelle"
   }, {
-    "s" : "60396",
-    "po" : "_:60411",
+    "s" : "99",
+    "po" : "_:114",
     "n" : "degree.layout",
     "v" : "1",
     "d" : "integer"
   }, {
-    "s" : "60396",
-    "po" : "_:60411",
+    "s" : "99",
+    "po" : "_:114",
     "n" : "selected",
     "v" : "false",
     "d" : "boolean"
   }, {
-    "s" : "60396",
-    "po" : "_:60410",
+    "s" : "99",
+    "po" : "_:113",
     "n" : "shared name",
     "v" : "Lyna"
   }, {
-    "s" : "60396",
-    "po" : "_:60410",
+    "s" : "99",
+    "po" : "_:113",
     "n" : "name",
     "v" : "Lyna"
   }, {
-    "s" : "60396",
-    "po" : "_:60410",
+    "s" : "99",
+    "po" : "_:113",
     "n" : "degree.layout",
     "v" : "1",
     "d" : "integer"
   }, {
-    "s" : "60396",
-    "po" : "_:60410",
+    "s" : "99",
+    "po" : "_:113",
     "n" : "selected",
     "v" : "false",
     "d" : "boolean"
   }, {
-    "s" : "60396",
-    "po" : "_:60409",
+    "s" : "99",
+    "po" : "_:112",
     "n" : "shared name",
     "v" : "Kirsty"
   }, {
-    "s" : "60396",
-    "po" : "_:60409",
+    "s" : "99",
+    "po" : "_:112",
     "n" : "name",
     "v" : "Kirsty"
   }, {
-    "s" : "60396",
-    "po" : "_:60409",
+    "s" : "99",
+    "po" : "_:112",
     "n" : "degree.layout",
     "v" : "1",
     "d" : "integer"
   }, {
-    "s" : "60396",
-    "po" : "_:60409",
+    "s" : "99",
+    "po" : "_:112",
     "n" : "selected",
     "v" : "false",
     "d" : "boolean"
   }, {
-    "s" : "60396",
-    "po" : "_:60408",
+    "s" : "99",
+    "po" : "_:111",
     "n" : "shared name",
     "v" : "Kaileigh"
   }, {
-    "s" : "60396",
-    "po" : "_:60408",
+    "s" : "99",
+    "po" : "_:111",
     "n" : "name",
     "v" : "Kaileigh"
   }, {
-    "s" : "60396",
-    "po" : "_:60408",
+    "s" : "99",
+    "po" : "_:111",
     "n" : "degree.layout",
     "v" : "1",
     "d" : "integer"
   }, {
-    "s" : "60396",
-    "po" : "_:60408",
+    "s" : "99",
+    "po" : "_:111",
     "n" : "selected",
     "v" : "false",
     "d" : "boolean"
   }, {
-    "s" : "60396",
-    "po" : "_:60407",
+    "s" : "99",
+    "po" : "_:110",
     "n" : "shared name",
     "v" : "Jazmin"
   }, {
-    "s" : "60396",
-    "po" : "_:60407",
+    "s" : "99",
+    "po" : "_:110",
     "n" : "name",
     "v" : "Jazmin"
   }, {
-    "s" : "60396",
-    "po" : "_:60407",
+    "s" : "99",
+    "po" : "_:110",
     "n" : "degree.layout",
     "v" : "1",
     "d" : "integer"
   }, {
-    "s" : "60396",
-    "po" : "_:60407",
+    "s" : "99",
+    "po" : "_:110",
     "n" : "selected",
     "v" : "false",
     "d" : "boolean"
   }, {
-    "s" : "60396",
-    "po" : "_:60406",
+    "s" : "99",
+    "po" : "_:109",
     "n" : "shared name",
     "v" : "Justin"
   }, {
-    "s" : "60396",
-    "po" : "_:60406",
+    "s" : "99",
+    "po" : "_:109",
     "n" : "name",
     "v" : "Justin"
   }, {
-    "s" : "60396",
-    "po" : "_:60406",
+    "s" : "99",
+    "po" : "_:109",
     "n" : "selected",
     "v" : "false",
     "d" : "boolean"
   } ]
 }, {
   "edgeAttributes" : [ {
-    "s" : "60396",
-    "po" : "_:60426",
+    "s" : "99",
+    "po" : "_:129",
     "n" : "shared name",
     "v" : "George (interaction) Katy"
   }, {
-    "s" : "60396",
-    "po" : "_:60426",
+    "s" : "99",
+    "po" : "_:129",
     "n" : "name",
     "v" : "George (interaction) Katy"
   }, {
-    "s" : "60396",
-    "po" : "_:60426",
+    "s" : "99",
+    "po" : "_:129",
     "n" : "interaction",
     "v" : "interaction"
   }, {
-    "s" : "60396",
-    "po" : "_:60426",
+    "s" : "99",
+    "po" : "_:129",
     "n" : "shared interaction",
     "v" : "interaction"
   }, {
-    "s" : "60396",
-    "po" : "_:60426",
+    "s" : "99",
+    "po" : "_:129",
     "n" : "selected",
     "v" : "false",
     "d" : "boolean"
   }, {
-    "s" : "60396",
-    "po" : "_:60425",
+    "s" : "99",
+    "po" : "_:128",
     "n" : "shared name",
     "v" : "George (interaction) Yano"
   }, {
-    "s" : "60396",
-    "po" : "_:60425",
+    "s" : "99",
+    "po" : "_:128",
     "n" : "name",
     "v" : "George (interaction) Yano"
   }, {
-    "s" : "60396",
-    "po" : "_:60425",
+    "s" : "99",
+    "po" : "_:128",
     "n" : "interaction",
     "v" : "interaction"
   }, {
-    "s" : "60396",
-    "po" : "_:60425",
+    "s" : "99",
+    "po" : "_:128",
     "n" : "shared interaction",
     "v" : "interaction"
   }, {
-    "s" : "60396",
-    "po" : "_:60425",
+    "s" : "99",
+    "po" : "_:128",
     "n" : "selected",
     "v" : "false",
     "d" : "boolean"
   }, {
-    "s" : "60396",
-    "po" : "_:60424",
+    "s" : "99",
+    "po" : "_:127",
     "n" : "shared name",
     "v" : "George (interaction) Kaileigh"
   }, {
-    "s" : "60396",
-    "po" : "_:60424",
+    "s" : "99",
+    "po" : "_:127",
     "n" : "name",
     "v" : "George (interaction) Kaileigh"
   }, {
-    "s" : "60396",
-    "po" : "_:60424",
+    "s" : "99",
+    "po" : "_:127",
     "n" : "interaction",
     "v" : "interaction"
   }, {
-    "s" : "60396",
-    "po" : "_:60424",
+    "s" : "99",
+    "po" : "_:127",
     "n" : "shared interaction",
     "v" : "interaction"
   }, {
-    "s" : "60396",
-    "po" : "_:60424",
+    "s" : "99",
+    "po" : "_:127",
     "n" : "selected",
     "v" : "false",
     "d" : "boolean"
   }, {
-    "s" : "60396",
-    "po" : "_:60423",
+    "s" : "99",
+    "po" : "_:126",
     "n" : "shared name",
     "v" : "George (undirected) Kirsti"
   }, {
-    "s" : "60396",
-    "po" : "_:60423",
+    "s" : "99",
+    "po" : "_:126",
     "n" : "name",
     "v" : "George (undirected) Kirsti"
   }, {
-    "s" : "60396",
-    "po" : "_:60423",
+    "s" : "99",
+    "po" : "_:126",
     "n" : "interaction",
     "v" : "undirected"
   }, {
-    "s" : "60396",
-    "po" : "_:60423",
+    "s" : "99",
+    "po" : "_:126",
     "n" : "shared interaction",
     "v" : "undirected"
   }, {
-    "s" : "60396",
-    "po" : "_:60423",
+    "s" : "99",
+    "po" : "_:126",
     "n" : "selected",
     "v" : "false",
     "d" : "boolean"
   }, {
-    "s" : "60396",
-    "po" : "_:60422",
+    "s" : "99",
+    "po" : "_:125",
     "n" : "shared name",
     "v" : "George (undirected) Lyna"
   }, {
-    "s" : "60396",
-    "po" : "_:60422",
+    "s" : "99",
+    "po" : "_:125",
     "n" : "name",
     "v" : "George (undirected) Lyna"
   }, {
-    "s" : "60396",
-    "po" : "_:60422",
+    "s" : "99",
+    "po" : "_:125",
     "n" : "interaction",
     "v" : "undirected"
   }, {
-    "s" : "60396",
-    "po" : "_:60422",
+    "s" : "99",
+    "po" : "_:125",
     "n" : "shared interaction",
     "v" : "undirected"
   }, {
-    "s" : "60396",
-    "po" : "_:60422",
+    "s" : "99",
+    "po" : "_:125",
     "n" : "selected",
     "v" : "false",
     "d" : "boolean"
   }, {
-    "s" : "60396",
-    "po" : "_:60421",
+    "s" : "99",
+    "po" : "_:124",
     "n" : "shared name",
     "v" : "Alexis (interaction) George"
   }, {
-    "s" : "60396",
-    "po" : "_:60421",
+    "s" : "99",
+    "po" : "_:124",
     "n" : "name",
     "v" : "Alexis (interaction) George"
   }, {
-    "s" : "60396",
-    "po" : "_:60421",
+    "s" : "99",
+    "po" : "_:124",
     "n" : "interaction",
     "v" : "interaction"
   }, {
-    "s" : "60396",
-    "po" : "_:60421",
+    "s" : "99",
+    "po" : "_:124",
     "n" : "shared interaction",
     "v" : "interaction"
   }, {
-    "s" : "60396",
-    "po" : "_:60421",
+    "s" : "99",
+    "po" : "_:124",
     "n" : "selected",
     "v" : "false",
     "d" : "boolean"
   }, {
-    "s" : "60396",
-    "po" : "_:60420",
+    "s" : "99",
+    "po" : "_:123",
     "n" : "shared name",
     "v" : "Taylor (interaction) George"
   }, {
-    "s" : "60396",
-    "po" : "_:60420",
+    "s" : "99",
+    "po" : "_:123",
     "n" : "name",
     "v" : "Taylor (interaction) George"
   }, {
-    "s" : "60396",
-    "po" : "_:60420",
+    "s" : "99",
+    "po" : "_:123",
     "n" : "interaction",
     "v" : "interaction"
   }, {
-    "s" : "60396",
-    "po" : "_:60420",
+    "s" : "99",
+    "po" : "_:123",
     "n" : "shared interaction",
     "v" : "interaction"
   }, {
-    "s" : "60396",
-    "po" : "_:60420",
+    "s" : "99",
+    "po" : "_:123",
     "n" : "selected",
     "v" : "false",
     "d" : "boolean"
   }, {
-    "s" : "60396",
-    "po" : "_:60419",
+    "s" : "99",
+    "po" : "_:122",
     "n" : "shared name",
     "v" : "Michelle (interaction) George"
   }, {
-    "s" : "60396",
-    "po" : "_:60419",
+    "s" : "99",
+    "po" : "_:122",
     "n" : "name",
     "v" : "Michelle (interaction) George"
   }, {
-    "s" : "60396",
-    "po" : "_:60419",
+    "s" : "99",
+    "po" : "_:122",
     "n" : "interaction",
     "v" : "interaction"
   }, {
-    "s" : "60396",
-    "po" : "_:60419",
+    "s" : "99",
+    "po" : "_:122",
     "n" : "shared interaction",
     "v" : "interaction"
   }, {
-    "s" : "60396",
-    "po" : "_:60419",
+    "s" : "99",
+    "po" : "_:122",
     "n" : "selected",
     "v" : "false",
     "d" : "boolean"
   }, {
-    "s" : "60396",
-    "po" : "_:60418",
+    "s" : "99",
+    "po" : "_:121",
     "n" : "shared name",
     "v" : "Jazmin (interaction) George"
   }, {
-    "s" : "60396",
-    "po" : "_:60418",
+    "s" : "99",
+    "po" : "_:121",
     "n" : "name",
     "v" : "Jazmin (interaction) George"
   }, {
-    "s" : "60396",
-    "po" : "_:60418",
+    "s" : "99",
+    "po" : "_:121",
     "n" : "interaction",
     "v" : "interaction"
   }, {
-    "s" : "60396",
-    "po" : "_:60418",
+    "s" : "99",
+    "po" : "_:121",
     "n" : "shared interaction",
     "v" : "interaction"
   }, {
-    "s" : "60396",
-    "po" : "_:60418",
+    "s" : "99",
+    "po" : "_:121",
     "n" : "selected",
     "v" : "false",
     "d" : "boolean"
   }, {
-    "s" : "60396",
-    "po" : "_:60417",
+    "s" : "99",
+    "po" : "_:120",
     "n" : "shared name",
     "v" : "Justin (interaction) George"
   }, {
-    "s" : "60396",
-    "po" : "_:60417",
+    "s" : "99",
+    "po" : "_:120",
     "n" : "name",
     "v" : "Justin (interaction) George"
   }, {
-    "s" : "60396",
-    "po" : "_:60417",
+    "s" : "99",
+    "po" : "_:120",
     "n" : "interaction",
     "v" : "interaction"
   }, {
-    "s" : "60396",
-    "po" : "_:60417",
+    "s" : "99",
+    "po" : "_:120",
     "n" : "shared interaction",
     "v" : "interaction"
   }, {
-    "s" : "60396",
-    "po" : "_:60417",
+    "s" : "99",
+    "po" : "_:120",
     "n" : "selected",
     "v" : "false",
     "d" : "boolean"
+  } ]
+}, {
+  "hiddenAttributes" : [ {
+    "s" : "99",
+    "n" : "layoutAlgorithm",
+    "v" : "Prefuse Force Directed Layout"
+  } ]
+}, {
+  "cartesianLayout" : [ {
+    "node" : "_:119",
+    "view" : "99",
+    "x" : 172.16278663763222,
+    "y" : 310.43561028127453
+  }, {
+    "node" : "_:118",
+    "view" : "99",
+    "x" : 106.5,
+    "y" : 159.5
+  }, {
+    "node" : "_:117",
+    "view" : "99",
+    "x" : 136.5,
+    "y" : -152.5
+  }, {
+    "node" : "_:116",
+    "view" : "99",
+    "x" : -107.5,
+    "y" : 369.5
+  }, {
+    "node" : "_:115",
+    "view" : "99",
+    "x" : 270.3933924607787,
+    "y" : 144.264649406819
+  }, {
+    "node" : "_:114",
+    "view" : "99",
+    "x" : 272.5,
+    "y" : 397.5
+  }, {
+    "node" : "_:113",
+    "view" : "99",
+    "x" : -35.91961148369916,
+    "y" : 76.9784012222728
+  }, {
+    "node" : "_:112",
+    "view" : "99",
+    "x" : 143.21647212022924,
+    "y" : -0.9526742533275012
+  }, {
+    "node" : "_:111",
+    "view" : "99",
+    "x" : -16.375830233276815,
+    "y" : 269.020273668773
+  }, {
+    "node" : "_:110",
+    "view" : "99",
+    "x" : -163.5,
+    "y" : 17.5
+  }, {
+    "node" : "_:109",
+    "view" : "99",
+    "x" : 430.5,
+    "y" : 41.5
+  } ]
+}, {
+  "visualProperties" : [ {
+    "properties_of" : "network",
+    "applies_to" : "99",
+    "view" : "99",
+    "properties" : {
+      "NETWORK_BACKGROUND_PAINT" : "#FFFFFF",
+      "NETWORK_CENTER_X_LOCATION" : "0.0",
+      "NETWORK_CENTER_Y_LOCATION" : "0.0",
+      "NETWORK_CENTER_Z_LOCATION" : "0.0",
+      "NETWORK_DEPTH" : "0.0",
+      "NETWORK_EDGE_SELECTION" : "true",
+      "NETWORK_HEIGHT" : "400.0",
+      "NETWORK_NODE_SELECTION" : "true",
+      "NETWORK_SCALE_FACTOR" : "1.0",
+      "NETWORK_WIDTH" : "550.0"
+    }
+  }, {
+    "properties_of" : "nodes:default",
+    "applies_to" : "99",
+    "view" : "99",
+    "properties" : {
+      "COMPOUND_NODE_PADDING" : "10.0",
+      "COMPOUND_NODE_SHAPE" : "ROUND_RECTANGLE",
+      "NODE_BORDER_PAINT" : "#000000",
+      "NODE_BORDER_STROKE" : "SOLID",
+      "NODE_BORDER_TRANSPARENCY" : "255",
+      "NODE_BORDER_WIDTH" : "4.0",
+      "NODE_DEPTH" : "0.0",
+      "NODE_FILL_COLOR" : "#FF0071",
+      "NODE_HEIGHT" : "40.0",
+      "NODE_LABEL_COLOR" : "#FFFFFF",
+      "NODE_LABEL_FONT_FACE" : "FreeSans,plain,12",
+      "NODE_LABEL_FONT_SIZE" : "14",
+      "NODE_LABEL_POSITION" : "C,C,c,0.00,0.00",
+      "NODE_LABEL_TRANSPARENCY" : "255",
+      "NODE_LABEL_WIDTH" : "200.0",
+      "NODE_NESTED_NETWORK_IMAGE_VISIBLE" : "true",
+      "NODE_PAINT" : "#787878",
+      "NODE_SELECTED" : "false",
+      "NODE_SELECTED_PAINT" : "#FFFF00",
+      "NODE_SHAPE" : "ELLIPSE",
+      "NODE_SIZE" : "75.0",
+      "NODE_TRANSPARENCY" : "255",
+      "NODE_VISIBLE" : "true",
+      "NODE_WIDTH" : "60.0",
+      "NODE_X_LOCATION" : "0.0",
+      "NODE_Y_LOCATION" : "0.0",
+      "NODE_Z_LOCATION" : "0.0",
+      "PASSTHROUGH_MAPPING_NODE_LABEL" : "COL=shared name,T=string"
+    }
+  }, {
+    "properties_of" : "edges:default",
+    "applies_to" : "99",
+    "view" : "99",
+    "properties" : {
+      "EDGE_CURVED" : "true",
+      "EDGE_LABEL_COLOR" : "#000000",
+      "EDGE_LABEL_FONT_FACE" : "SansSerif.plain,plain,10",
+      "EDGE_LABEL_FONT_SIZE" : "10",
+      "EDGE_LABEL_TRANSPARENCY" : "255",
+      "EDGE_LABEL_WIDTH" : "200.0",
+      "EDGE_LINE_TYPE" : "SOLID",
+      "EDGE_PAINT" : "#808080",
+      "EDGE_SELECTED" : "false",
+      "EDGE_SELECTED_PAINT" : "#FF0000",
+      "EDGE_SOURCE_ARROW_SELECTED_PAINT" : "#FFFF00",
+      "EDGE_SOURCE_ARROW_SHAPE" : "NONE",
+      "EDGE_SOURCE_ARROW_UNSELECTED_PAINT" : "#000000",
+      "EDGE_STROKE_SELECTED_PAINT" : "#FF0000",
+      "EDGE_STROKE_UNSELECTED_PAINT" : "#404040",
+      "EDGE_TARGET_ARROW_SELECTED_PAINT" : "#FFFF00",
+      "EDGE_TARGET_ARROW_SHAPE" : "NONE",
+      "EDGE_TARGET_ARROW_UNSELECTED_PAINT" : "#000000",
+      "EDGE_TRANSPARENCY" : "255",
+      "EDGE_UNSELECTED_PAINT" : "#404040",
+      "EDGE_VISIBLE" : "true",
+      "EDGE_WIDTH" : "1.0"
+    }
+  }, {
+    "properties_of" : "edges",
+    "applies_to" : "_:129",
+    "view" : "99",
+    "properties" : {
+      "EDGE_TARGET_ARROW_SHAPE" : "ARROW"
+    }
+  }, {
+    "properties_of" : "edges",
+    "applies_to" : "_:128",
+    "view" : "99",
+    "properties" : {
+      "EDGE_TARGET_ARROW_SHAPE" : "ARROW"
+    }
+  }, {
+    "properties_of" : "edges",
+    "applies_to" : "_:127",
+    "view" : "99",
+    "properties" : {
+      "EDGE_TARGET_ARROW_SHAPE" : "ARROW"
+    }
+  }, {
+    "properties_of" : "edges",
+    "applies_to" : "_:124",
+    "view" : "99",
+    "properties" : {
+      "EDGE_TARGET_ARROW_SHAPE" : "ARROW"
+    }
+  }, {
+    "properties_of" : "edges",
+    "applies_to" : "_:122",
+    "view" : "99",
+    "properties" : {
+      "EDGE_TARGET_ARROW_SHAPE" : "ARROW"
+    }
+  }, {
+    "properties_of" : "edges",
+    "applies_to" : "_:121",
+    "view" : "99",
+    "properties" : {
+      "EDGE_TARGET_ARROW_SHAPE" : "ARROW"
+    }
+  }, {
+    "properties_of" : "edges",
+    "applies_to" : "_:120",
+    "view" : "99",
+    "properties" : {
+      "EDGE_TARGET_ARROW_SHAPE" : "ARROW"
+    }
+  } ]
+}, {
+  "subNetworks" : [ {
+    "id" : "99",
+    "nodes" : [ "_:119", "_:118", "_:117", "_:116", "_:115", "_:114", "_:113", "_:112", "_:111", "_:110", "_:109" ],
+    "edges" : [ "_:129", "_:128", "_:127", "_:126", "_:125", "_:124", "_:123", "_:122", "_:121", "_:120" ]
+  } ]
+}, {
+  "networkRelations" : [ {
+    "p" : "83",
+    "c" : "99",
+    "r" : "subnetwork",
+    "name" : "child_name"
   } ]
 } ]
