@@ -7,10 +7,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.HashSet;
 
+import org.cxio.aspects.readers.CyVisualPropertiesFragmentReader;
 import org.cxio.aspects.readers.EdgesFragmentReader;
 import org.cxio.aspects.readers.NodesFragmentReader;
 import org.cxio.aspects.writers.CartesianLayoutFragmentWriter;
@@ -53,18 +55,23 @@ public class LayoutService {
 			throw new RuntimeException("Something went wrong!");
 		}
 
-		AspectFragmentReader[] readerArray = {nodesFragmentReader, edgesFragmentReader};
-		List<AspectFragmentReader> readers = Arrays.asList(readerArray);
+		List<AspectFragmentReader> readers = new ArrayList<AspectFragmentReader>(2);
+		readers.add(nodesFragmentReader);
+		readers.add(edgesFragmentReader);
 		try {
-			CxReader cxReader = CxReader.createInstance(cxInput, new HashSet<AspectFragmentReader>(readers));
+			CxReader cxReader;
 			CxWriter cxWriter = CxWriter.createInstance(outputFileStream, true, new HashSet<AspectFragmentWriter>(writers));
 			System.out.println("Applying layout...");
 			switch (algorithm) {
 				case GRID_LAYOUT: {
+					cxReader = CxReader.createInstance(cxInput, new HashSet<AspectFragmentReader>(readers));
 					applyLayout(new GridLayout(cxReader, cxWriter));
 					break;
 				}
 				case STACKED_LAYOUT: {
+					CyVisualPropertiesFragmentReader vizPropFragmentReader = CyVisualPropertiesFragmentReader.createInstance();
+					readers.add(vizPropFragmentReader);
+					cxReader = CxReader.createInstance(cxInput, new HashSet<AspectFragmentReader>(readers));
 					applyLayout(new StackedNodeLayout(cxReader, cxWriter));
 					break;
 				}
@@ -86,9 +93,9 @@ public class LayoutService {
 		String inputFilePath = args[0];
 		String algorithm = args[1];
 		InputStream cxInput = ClassLoader.getSystemResourceAsStream(inputFilePath);
-		System.out.println("Applying gridlayout on network found in " + inputFilePath );
+		System.out.println(String.format("Applying %s layout on network specified in %s", algorithm, inputFilePath));
 		run(cxInput, algorithm);
-		System.out.println("Grid layout created.");
+		System.out.println(String.format("%s layout applied", algorithm));
 	}
 
 }
