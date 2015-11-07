@@ -20,7 +20,6 @@ public class GridLayout extends AbstractLayout {
 	public GridLayout(CxReader cxNodeReader, CxWriter cxLayoutWriter) {
 		super(cxNodeReader, cxLayoutWriter);
 		
-		parseInput();
 	}
 
 	@Override
@@ -63,17 +62,13 @@ public class GridLayout extends AbstractLayout {
 	@Override
 	protected void parseInput() {
 		ArrayList<NodesElement> nodes = new ArrayList<NodesElement>();
-		try {
-			while (cxNodeReader.hasNext()) {
-				List<AspectElement> aspectElements = cxNodeReader.getNext();
-				for (AspectElement element : aspectElements) {
-					if (element.getAspectName().equals(NodesElement.NAME)) {
-						nodes.add((NodesElement)element);
-					}
+		while (cxNodeReader.hasNext()) {
+			List<AspectElement> aspectElements = cxNodeReader.getNext();
+			for (AspectElement element : aspectElements) {
+				if (element.getAspectName().equals(NodesElement.ASPECT_NAME)) {
+					nodes.add((NodesElement)element);
 				}
 			}
-		} catch (IOException e) {
-			throw new RuntimeException("I/O Exception while reading CX file.");
 		}
 		nodesToLayOut = nodes;
 	}

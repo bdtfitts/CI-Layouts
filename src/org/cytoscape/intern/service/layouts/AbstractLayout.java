@@ -15,18 +15,16 @@ public abstract class AbstractLayout implements LayoutAlgorithm {
 	}
 	
 	protected void startLayout() throws IOException {
-		cxLayoutWriter.start();
-		cxLayoutWriter.startAspectFragment(CartesianLayoutElement.NAME);
+		cxLayoutWriter.startAspectFragment(CartesianLayoutElement.ASPECT_NAME);
 	}
 
 	protected void finishLayout() throws IOException {
 		cxLayoutWriter.endAspectFragment();
-		cxLayoutWriter.end();
 	}
 
 	@Override
-	abstract public void apply();
+	abstract public void apply() throws IOException;
 
-	abstract protected void parseInput();
+	abstract protected void parseInput() throws IOException;
 
 }

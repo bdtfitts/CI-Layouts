@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -29,7 +31,7 @@ public class LayoutService {
 	private static final String GRID_LAYOUT = "grid";
 	private static final String STACKED_LAYOUT = "stacked";
 
-	private static void applyLayout(LayoutAlgorithm layout) {
+	private static void applyLayout(LayoutAlgorithm layout) throws IOException {
 		layout.apply();
 	}
 	public static void run(InputStream cxInput, String algorithm) {
@@ -42,17 +44,21 @@ public class LayoutService {
 		List<AspectFragmentWriter> writers = Arrays.asList(writerArray);
 
 		FileOutputStream outputFileStream = null;
-		URL url = ClassLoader.getSystemResource("resources/cxOutput.cx");
+		//Get the resources directory
+		URL url = ClassLoader.getSystemResource("resources/");
+		Path filePath = Paths.get(url.getPath(), "cxOutput.cx");
+		File file = filePath.toFile();
 		try {
-			File file = new File(url.toURI());
-			try {
-				outputFileStream = new FileOutputStream(file);
-			} catch (FileNotFoundException e) {
-				throw new RuntimeException("Something went wrong!");
+			if (!file.exists()) {
+				try {
+					file.createNewFile();
+				} catch (IOException e) {
+					throw new RuntimeException("Something went wrong with creating output file");
+				}
 			}
-		} catch (URISyntaxException e) {
-			e.printStackTrace();
-			throw new RuntimeException("Something went wrong!");
+			outputFileStream = new FileOutputStream(file);
+		} catch (FileNotFoundException e) {
+			throw new RuntimeException("Could not find the file to write to");
 		}
 
 		List<AspectFragmentReader> readers = new ArrayList<AspectFragmentReader>(2);
@@ -65,25 +71,41 @@ public class LayoutService {
 			switch (algorithm) {
 				case GRID_LAYOUT: {
 					cxReader = CxReader.createInstance(cxInput, new HashSet<AspectFragmentReader>(readers));
-					applyLayout(new GridLayout(cxReader, cxWriter));
+					cxWriter.start();
+					try {
+						applyLayout(new GridLayout(cxReader, cxWriter));
+					} catch (Exception e) {
+						cxWriter.end(false, e.getMessage());
+					}
 					break;
 				}
 				case STACKED_LAYOUT: {
 					CyVisualPropertiesFragmentReader vizPropFragmentReader = CyVisualPropertiesFragmentReader.createInstance();
 					readers.add(vizPropFragmentReader);
 					cxReader = CxReader.createInstance(cxInput, new HashSet<AspectFragmentReader>(readers));
-					applyLayout(new StackedNodeLayout(cxReader, cxWriter));
+					cxWriter.start();
+					try {
+						applyLayout(new StackedNodeLayout(cxReader, cxWriter));
+					} catch (Exception e) {
+						cxWriter.end(false, e.getMessage());
+					}
 					break;
 				}
 				default: {
+					cxWriter.start();
+					cxWriter.end(true, "Unable to create layout in accordance to given algorithm");
 					break;
 				}
 			}
-
-			outputFileStream.flush();
-			outputFileStream.close();
 		} catch (IOException e) {
-			throw new RuntimeException("Something went wrong!");
+			throw new RuntimeException("Unable to create CX Readers and/or Writers");
+		} finally {
+			try {
+				if (outputFileStream != null) {
+					outputFileStream.flush();
+					outputFileStream.close();
+				}
+			} catch (IOException e) {}
 		}
 	}
 	public static void main(String[] args) {

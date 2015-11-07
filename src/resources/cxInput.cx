@@ -1,332 +1,336 @@
 [ {
   "nodes" : [ {
-    "@id" : "_:140",
+    "@id" : "_:51496",
     "n" : "Feedly"
   }, {
-    "@id" : "_:139",
+    "@id" : "_:51495",
     "n" : "YouTube"
   }, {
-    "@id" : "_:138",
+    "@id" : "_:51494",
     "n" : "Firefox Start Page"
   }, {
-    "@id" : "_:137",
+    "@id" : "_:51493",
     "n" : "Wikipedia"
   }, {
-    "@id" : "_:136",
+    "@id" : "_:51492",
     "n" : "Bing"
   }, {
-    "@id" : "_:135",
+    "@id" : "_:51491",
     "n" : "IMDB"
   }, {
-    "@id" : "_:134",
+    "@id" : "_:51490",
     "n" : "Twitter"
   }, {
-    "@id" : "_:133",
+    "@id" : "_:51489",
     "n" : "Outlook"
   }, {
-    "@id" : "_:132",
+    "@id" : "_:51488",
     "n" : "Facebook"
   } ]
 }, {
   "edges" : [ {
-    "@id" : "_:146",
-    "s" : "_:138",
-    "t" : "_:133",
+    "@id" : "_:51502",
+    "s" : "_:51494",
+    "t" : "_:51489",
     "i" : "interaction"
   }, {
-    "@id" : "_:145",
-    "s" : "_:138",
-    "t" : "_:136",
+    "@id" : "_:51501",
+    "s" : "_:51494",
+    "t" : "_:51492",
     "i" : "interaction"
   }, {
-    "@id" : "_:144",
-    "s" : "_:138",
-    "t" : "_:140",
+    "@id" : "_:51500",
+    "s" : "_:51494",
+    "t" : "_:51496",
     "i" : "interaction"
   }, {
-    "@id" : "_:142",
-    "s" : "_:138",
-    "t" : "_:139",
+    "@id" : "_:51498",
+    "s" : "_:51494",
+    "t" : "_:51495",
     "i" : "interaction"
   }, {
-    "@id" : "_:141",
-    "s" : "_:138",
-    "t" : "_:132",
+    "@id" : "_:51497",
+    "s" : "_:51494",
+    "t" : "_:51488",
     "i" : "interaction"
   }, {
-    "@id" : "_:149",
-    "s" : "_:136",
-    "t" : "_:139",
+    "@id" : "_:51505",
+    "s" : "_:51492",
+    "t" : "_:51495",
     "i" : "interaction"
   }, {
-    "@id" : "_:148",
-    "s" : "_:136",
-    "t" : "_:137",
+    "@id" : "_:51504",
+    "s" : "_:51492",
+    "t" : "_:51493",
     "i" : "interaction"
   }, {
-    "@id" : "_:147",
-    "s" : "_:136",
-    "t" : "_:135",
+    "@id" : "_:51503",
+    "s" : "_:51492",
+    "t" : "_:51491",
     "i" : "interaction"
   }, {
-    "@id" : "_:143",
-    "s" : "_:136",
-    "t" : "_:134",
+    "@id" : "_:51499",
+    "s" : "_:51492",
+    "t" : "_:51490",
     "i" : "interaction"
   } ]
 }, {
   "networkAttributes" : [ {
-    "s" : "122",
+    "s" : "51478",
     "n" : "shared name",
     "v" : "Internet Navigation"
   }, {
-    "s" : "122",
+    "s" : "51478",
     "n" : "name",
     "v" : "Internet Navigation"
   } ]
 }, {
   "hiddenAttributes" : [ {
-    "s" : "122",
+    "s" : "51478",
     "n" : "DOT_network",
     "v" : "true",
     "d" : "boolean"
+  }, {
+    "s" : "51478",
+    "n" : "layoutAlgorithm",
+    "v" : "Stacked Node Layout"
   } ]
 }, {
   "nodeAttributes" : [ {
-    "s" : "122",
-    "po" : "_:140",
+    "s" : "51478",
+    "po" : "_:51496",
     "n" : "name",
     "v" : "Feedly"
   }, {
-    "s" : "122",
-    "po" : "_:139",
+    "s" : "51478",
+    "po" : "_:51495",
     "n" : "name",
     "v" : "YouTube"
   }, {
-    "s" : "122",
-    "po" : "_:138",
+    "s" : "51478",
+    "po" : "_:51494",
     "n" : "name",
     "v" : "Firefox Start Page"
   }, {
-    "s" : "122",
-    "po" : "_:137",
+    "s" : "51478",
+    "po" : "_:51493",
     "n" : "name",
     "v" : "Wikipedia"
   }, {
-    "s" : "122",
-    "po" : "_:136",
+    "s" : "51478",
+    "po" : "_:51492",
     "n" : "name",
     "v" : "Bing"
   }, {
-    "s" : "122",
-    "po" : "_:135",
+    "s" : "51478",
+    "po" : "_:51491",
     "n" : "name",
     "v" : "IMDB"
   }, {
-    "s" : "122",
-    "po" : "_:134",
+    "s" : "51478",
+    "po" : "_:51490",
     "n" : "name",
     "v" : "Twitter"
   }, {
-    "s" : "122",
-    "po" : "_:133",
+    "s" : "51478",
+    "po" : "_:51489",
     "n" : "name",
     "v" : "Outlook"
   }, {
-    "s" : "122",
-    "po" : "_:132",
+    "s" : "51478",
+    "po" : "_:51488",
     "n" : "name",
     "v" : "Facebook"
   } ]
 }, {
   "edgeAttributes" : [ {
-    "s" : "122",
-    "po" : "_:146",
+    "s" : "51478",
+    "po" : "_:51502",
     "n" : "shared name",
     "v" : "Firefox Start Page (interaction) Outlook"
   }, {
-    "s" : "122",
-    "po" : "_:146",
+    "s" : "51478",
+    "po" : "_:51502",
     "n" : "name",
     "v" : "Firefox Start Page (interaction) Outlook"
   }, {
-    "s" : "122",
-    "po" : "_:146",
+    "s" : "51478",
+    "po" : "_:51502",
     "n" : "interaction",
     "v" : "interaction"
   }, {
-    "s" : "122",
-    "po" : "_:145",
+    "s" : "51478",
+    "po" : "_:51501",
     "n" : "shared name",
     "v" : "Firefox Start Page (interaction) Bing"
   }, {
-    "s" : "122",
-    "po" : "_:145",
+    "s" : "51478",
+    "po" : "_:51501",
     "n" : "name",
     "v" : "Firefox Start Page (interaction) Bing"
   }, {
-    "s" : "122",
-    "po" : "_:145",
+    "s" : "51478",
+    "po" : "_:51501",
     "n" : "interaction",
     "v" : "interaction"
   }, {
-    "s" : "122",
-    "po" : "_:144",
+    "s" : "51478",
+    "po" : "_:51500",
     "n" : "shared name",
     "v" : "Firefox Start Page (interaction) Feedly"
   }, {
-    "s" : "122",
-    "po" : "_:144",
+    "s" : "51478",
+    "po" : "_:51500",
     "n" : "name",
     "v" : "Firefox Start Page (interaction) Feedly"
   }, {
-    "s" : "122",
-    "po" : "_:144",
+    "s" : "51478",
+    "po" : "_:51500",
     "n" : "interaction",
     "v" : "interaction"
   }, {
-    "s" : "122",
-    "po" : "_:142",
+    "s" : "51478",
+    "po" : "_:51498",
     "n" : "shared name",
     "v" : "Firefox Start Page (interaction) YouTube"
   }, {
-    "s" : "122",
-    "po" : "_:142",
+    "s" : "51478",
+    "po" : "_:51498",
     "n" : "name",
     "v" : "Firefox Start Page (interaction) YouTube"
   }, {
-    "s" : "122",
-    "po" : "_:142",
+    "s" : "51478",
+    "po" : "_:51498",
     "n" : "interaction",
     "v" : "interaction"
   }, {
-    "s" : "122",
-    "po" : "_:141",
+    "s" : "51478",
+    "po" : "_:51497",
     "n" : "shared name",
     "v" : "Firefox Start Page (interaction) Facebook"
   }, {
-    "s" : "122",
-    "po" : "_:141",
+    "s" : "51478",
+    "po" : "_:51497",
     "n" : "name",
     "v" : "Firefox Start Page (interaction) Facebook"
   }, {
-    "s" : "122",
-    "po" : "_:141",
+    "s" : "51478",
+    "po" : "_:51497",
     "n" : "interaction",
     "v" : "interaction"
   }, {
-    "s" : "122",
-    "po" : "_:149",
+    "s" : "51478",
+    "po" : "_:51505",
     "n" : "shared name",
     "v" : "Bing (interaction) YouTube"
   }, {
-    "s" : "122",
-    "po" : "_:149",
+    "s" : "51478",
+    "po" : "_:51505",
     "n" : "name",
     "v" : "Bing (interaction) YouTube"
   }, {
-    "s" : "122",
-    "po" : "_:149",
+    "s" : "51478",
+    "po" : "_:51505",
     "n" : "interaction",
     "v" : "interaction"
   }, {
-    "s" : "122",
-    "po" : "_:148",
+    "s" : "51478",
+    "po" : "_:51504",
     "n" : "shared name",
     "v" : "Bing (interaction) Wikipedia"
   }, {
-    "s" : "122",
-    "po" : "_:148",
+    "s" : "51478",
+    "po" : "_:51504",
     "n" : "name",
     "v" : "Bing (interaction) Wikipedia"
   }, {
-    "s" : "122",
-    "po" : "_:148",
+    "s" : "51478",
+    "po" : "_:51504",
     "n" : "interaction",
     "v" : "interaction"
   }, {
-    "s" : "122",
-    "po" : "_:147",
+    "s" : "51478",
+    "po" : "_:51503",
     "n" : "shared name",
     "v" : "Bing (interaction) IMDB"
   }, {
-    "s" : "122",
-    "po" : "_:147",
+    "s" : "51478",
+    "po" : "_:51503",
     "n" : "name",
     "v" : "Bing (interaction) IMDB"
   }, {
-    "s" : "122",
-    "po" : "_:147",
+    "s" : "51478",
+    "po" : "_:51503",
     "n" : "interaction",
     "v" : "interaction"
   }, {
-    "s" : "122",
-    "po" : "_:143",
+    "s" : "51478",
+    "po" : "_:51499",
     "n" : "shared name",
     "v" : "Bing (interaction) Twitter"
   }, {
-    "s" : "122",
-    "po" : "_:143",
+    "s" : "51478",
+    "po" : "_:51499",
     "n" : "name",
     "v" : "Bing (interaction) Twitter"
   }, {
-    "s" : "122",
-    "po" : "_:143",
+    "s" : "51478",
+    "po" : "_:51499",
     "n" : "interaction",
     "v" : "interaction"
   } ]
 }, {
   "cartesianLayout" : [ {
-    "node" : "_:140",
-    "view" : "122",
-    "x" : 214.730617,
-    "y" : -182.708847
+    "node" : "_:51496",
+    "view" : "51478",
+    "x" : 129.46060455555556,
+    "y" : 472.59360177777774
   }, {
-    "node" : "_:139",
-    "view" : "122",
-    "x" : -42.345578,
-    "y" : -179.450912
+    "node" : "_:51495",
+    "view" : "51478",
+    "x" : 129.46060455555556,
+    "y" : -475.40639822222226
   }, {
-    "node" : "_:138",
-    "view" : "122",
-    "x" : -43.0,
-    "y" : -12.0
+    "node" : "_:51494",
+    "view" : "51478",
+    "x" : 129.46060455555556,
+    "y" : -159.40639822222226
   }, {
-    "node" : "_:137",
-    "view" : "122",
-    "x" : 473.910346,
-    "y" : 127.031052
+    "node" : "_:51493",
+    "view" : "51478",
+    "x" : 129.46060455555556,
+    "y" : -1.4063982222222648
   }, {
-    "node" : "_:136",
-    "view" : "122",
-    "x" : 215.650724,
-    "y" : -11.300686
+    "node" : "_:51492",
+    "view" : "51478",
+    "x" : 129.46060455555556,
+    "y" : 314.59360177777774
   }, {
-    "node" : "_:135",
-    "view" : "122",
-    "x" : 473.773908,
-    "y" : -8.660668
+    "node" : "_:51491",
+    "view" : "51478",
+    "x" : 129.46060455555556,
+    "y" : 630.5936017777777
   }, {
-    "node" : "_:134",
-    "view" : "122",
-    "x" : 217.4931,
-    "y" : 131.565674
+    "node" : "_:51490",
+    "view" : "51478",
+    "x" : 129.46060455555556,
+    "y" : -633.4063982222223
   }, {
-    "node" : "_:133",
-    "view" : "122",
-    "x" : -44.018085,
-    "y" : 130.767776
+    "node" : "_:51489",
+    "view" : "51478",
+    "x" : 129.46060455555556,
+    "y" : -317.40639822222226
   }, {
-    "node" : "_:132",
-    "view" : "122",
-    "x" : -301.049591,
-    "y" : -7.900973
+    "node" : "_:51488",
+    "view" : "51478",
+    "x" : 129.46060455555556,
+    "y" : 156.59360177777774
   } ]
 }, {
   "visualProperties" : [ {
     "properties_of" : "network",
-    "applies_to" : "122",
-    "view" : "122",
+    "applies_to" : "51478",
+    "view" : "51478",
     "properties" : {
       "NETWORK_BACKGROUND_PAINT" : "#FFFFFF",
       "NETWORK_CENTER_X_LOCATION" : "0.0",
@@ -342,8 +346,8 @@
     }
   }, {
     "properties_of" : "nodes:default",
-    "applies_to" : "122",
-    "view" : "122",
+    "applies_to" : "51478",
+    "view" : "51478",
     "properties" : {
       "COMPOUND_NODE_PADDING" : "10.0",
       "COMPOUND_NODE_SHAPE" : "ROUND_RECTANGLE",
@@ -354,7 +358,7 @@
       "NODE_DEPTH" : "0.0",
       "NODE_FILL_COLOR" : "#FF8C00",
       "NODE_HEIGHT" : "79.99999199999999",
-      "NODE_LABEL_COLOR" : "#000000",
+      "NODE_LABEL_COLOR" : "#FFFFFF",
       "NODE_LABEL_FONT_FACE" : "FreeSans,plain,12",
       "NODE_LABEL_FONT_SIZE" : "20",
       "NODE_LABEL_POSITION" : "C,C,c,0.00,0.00",
@@ -376,8 +380,8 @@
     }
   }, {
     "properties_of" : "edges:default",
-    "applies_to" : "122",
-    "view" : "122",
+    "applies_to" : "51478",
+    "view" : "51478",
     "properties" : {
       "EDGE_CURVED" : "true",
       "EDGE_LABEL_COLOR" : "#000000",
@@ -404,143 +408,143 @@
     }
   }, {
     "properties_of" : "nodes",
-    "applies_to" : "_:140",
-    "view" : "122",
+    "applies_to" : "_:51496",
+    "view" : "51478",
     "properties" : {
       "NODE_LABEL" : "Feedly"
     }
   }, {
     "properties_of" : "nodes",
-    "applies_to" : "_:139",
-    "view" : "122",
+    "applies_to" : "_:51495",
+    "view" : "51478",
     "properties" : {
       "NODE_LABEL" : "YouTube"
     }
   }, {
     "properties_of" : "nodes",
-    "applies_to" : "_:138",
-    "view" : "122",
+    "applies_to" : "_:51494",
+    "view" : "51478",
     "properties" : {
       "NODE_LABEL" : "Firefox Start Page",
       "NODE_WIDTH" : "175.000032"
     }
   }, {
     "properties_of" : "nodes",
-    "applies_to" : "_:137",
-    "view" : "122",
+    "applies_to" : "_:51493",
+    "view" : "51478",
     "properties" : {
       "NODE_LABEL" : "Wikipedia"
     }
   }, {
     "properties_of" : "nodes",
-    "applies_to" : "_:136",
-    "view" : "122",
+    "applies_to" : "_:51492",
+    "view" : "51478",
     "properties" : {
       "NODE_LABEL" : "Bing",
       "NODE_WIDTH" : "79.99999199999999"
     }
   }, {
     "properties_of" : "nodes",
-    "applies_to" : "_:135",
-    "view" : "122",
+    "applies_to" : "_:51491",
+    "view" : "51478",
     "properties" : {
       "NODE_LABEL" : "IMDB"
     }
   }, {
     "properties_of" : "nodes",
-    "applies_to" : "_:134",
-    "view" : "122",
+    "applies_to" : "_:51490",
+    "view" : "51478",
     "properties" : {
       "NODE_LABEL" : "Twitter"
     }
   }, {
     "properties_of" : "nodes",
-    "applies_to" : "_:133",
-    "view" : "122",
+    "applies_to" : "_:51489",
+    "view" : "51478",
     "properties" : {
       "NODE_LABEL" : "Outlook"
     }
   }, {
     "properties_of" : "nodes",
-    "applies_to" : "_:132",
-    "view" : "122",
+    "applies_to" : "_:51488",
+    "view" : "51478",
     "properties" : {
       "NODE_LABEL" : "Facebook"
     }
   }, {
     "properties_of" : "edges",
-    "applies_to" : "_:146",
-    "view" : "122",
+    "applies_to" : "_:51502",
+    "view" : "51478",
     "properties" : {
       "EDGE_TARGET_ARROW_SHAPE" : "ARROW"
     }
   }, {
     "properties_of" : "edges",
-    "applies_to" : "_:145",
-    "view" : "122",
+    "applies_to" : "_:51501",
+    "view" : "51478",
     "properties" : {
       "EDGE_TARGET_ARROW_SHAPE" : "ARROW"
     }
   }, {
     "properties_of" : "edges",
-    "applies_to" : "_:144",
-    "view" : "122",
+    "applies_to" : "_:51500",
+    "view" : "51478",
     "properties" : {
       "EDGE_TARGET_ARROW_SHAPE" : "ARROW"
     }
   }, {
     "properties_of" : "edges",
-    "applies_to" : "_:142",
-    "view" : "122",
+    "applies_to" : "_:51498",
+    "view" : "51478",
     "properties" : {
       "EDGE_TARGET_ARROW_SHAPE" : "ARROW"
     }
   }, {
     "properties_of" : "edges",
-    "applies_to" : "_:141",
-    "view" : "122",
+    "applies_to" : "_:51497",
+    "view" : "51478",
     "properties" : {
       "EDGE_TARGET_ARROW_SHAPE" : "ARROW"
     }
   }, {
     "properties_of" : "edges",
-    "applies_to" : "_:149",
-    "view" : "122",
+    "applies_to" : "_:51505",
+    "view" : "51478",
     "properties" : {
       "EDGE_TARGET_ARROW_SHAPE" : "ARROW"
     }
   }, {
     "properties_of" : "edges",
-    "applies_to" : "_:148",
-    "view" : "122",
+    "applies_to" : "_:51504",
+    "view" : "51478",
     "properties" : {
       "EDGE_TARGET_ARROW_SHAPE" : "ARROW"
     }
   }, {
     "properties_of" : "edges",
-    "applies_to" : "_:147",
-    "view" : "122",
+    "applies_to" : "_:51503",
+    "view" : "51478",
     "properties" : {
       "EDGE_TARGET_ARROW_SHAPE" : "ARROW"
     }
   }, {
     "properties_of" : "edges",
-    "applies_to" : "_:143",
-    "view" : "122",
+    "applies_to" : "_:51499",
+    "view" : "51478",
     "properties" : {
       "EDGE_TARGET_ARROW_SHAPE" : "ARROW"
     }
   } ]
 }, {
   "subNetworks" : [ {
-    "id" : "122",
-    "nodes" : [ "_:140", "_:139", "_:138", "_:137", "_:136", "_:135", "_:134", "_:133", "_:132" ],
-    "edges" : [ "_:146", "_:145", "_:144", "_:142", "_:141", "_:149", "_:148", "_:147", "_:143" ]
+    "id" : "51478",
+    "nodes" : [ "_:51496", "_:51495", "_:51494", "_:51493", "_:51492", "_:51491", "_:51490", "_:51489", "_:51488" ],
+    "edges" : [ "_:51502", "_:51501", "_:51500", "_:51498", "_:51497", "_:51505", "_:51504", "_:51503", "_:51499" ]
   } ]
 }, {
   "networkRelations" : [ {
-    "p" : "106",
-    "c" : "122",
+    "p" : "51462",
+    "c" : "51478",
     "r" : "subnetwork",
     "name" : "Internet Navigation"
   } ]
