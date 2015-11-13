@@ -16,6 +16,7 @@ public abstract class AbstractLayout implements LayoutAlgorithm {
 	
 	protected void startLayout() throws IOException {
 		cxLayoutWriter.startAspectFragment(CartesianLayoutElement.ASPECT_NAME);
+		parseInput();
 	}
 
 	protected void finishLayout() throws IOException {

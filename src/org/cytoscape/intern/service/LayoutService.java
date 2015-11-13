@@ -70,14 +70,16 @@ public class LayoutService {
 			System.out.println("Applying layout...");
 			switch (algorithm) {
 				case GRID_LAYOUT: {
+					System.out.println("Creating cxReader...");
 					cxReader = CxReader.createInstance(cxInput, new HashSet<AspectFragmentReader>(readers));
+					System.out.println("Created cxReader.");
 					cxWriter.start();
 					try {
 						applyLayout(new GridLayout(cxReader, cxWriter));
-					} catch (Exception e) {
-						cxWriter.end(false, e.getMessage());
+						cxWriter.end(true, "Applied GridLayout to network");
+					} catch (IOException e) {
+						cxWriter.end(false, "Error when writing to file");
 					}
-					cxWriter.end(true, "Applied GridLayout to network");
 					break;
 				}
 				case STACKED_LAYOUT: {
@@ -87,10 +89,10 @@ public class LayoutService {
 					cxWriter.start();
 					try {
 						applyLayout(new StackedNodeLayout(cxReader, cxWriter));
-					} catch (Exception e) {
-						cxWriter.end(false, e.getMessage());
+						cxWriter.end(true, "Applied StackedNodeLayout to network");
+					} catch (IOException e) {
+						cxWriter.end(false, "Error when writing to file");
 					}
-					cxWriter.end(true, "Applied StackedNodeLayout to network");
 					break;
 				}
 				default: {
