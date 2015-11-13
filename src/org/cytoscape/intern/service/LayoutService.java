@@ -77,6 +77,7 @@ public class LayoutService {
 					} catch (Exception e) {
 						cxWriter.end(false, e.getMessage());
 					}
+					cxWriter.end(true, "Applied GridLayout to network");
 					break;
 				}
 				case STACKED_LAYOUT: {
@@ -89,6 +90,7 @@ public class LayoutService {
 					} catch (Exception e) {
 						cxWriter.end(false, e.getMessage());
 					}
+					cxWriter.end(true, "Applied StackedNodeLayout to network");
 					break;
 				}
 				default: {

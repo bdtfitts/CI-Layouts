@@ -23,44 +23,40 @@ public class GridLayout extends AbstractLayout {
 	}
 
 	@Override
-	public void apply() {
-		try {
-			startLayout();
-			double currX = 0.0d;
-			double currY = 0.0d;
-			double initialX = 0.0d;
+	public void apply() throws IOException {
+		startLayout();
+		double currX = 0.0d;
+		double currY = 0.0d;
+		double initialX = 0.0d;
 
-			// Yes, our size and starting points need to be different
-			final int nodeCount = nodesToLayOut.size();
-			final int columns = (int) Math.sqrt(nodeCount);
+		// Yes, our size and starting points need to be different
+		final int nodeCount = nodesToLayOut.size();
+		final int columns = (int) Math.sqrt(nodeCount);
 
-			int count = 0;
+		int count = 0;
 
-			// Set visual property.
-			// TODO: We need batch apply method for Visual Property values for
-			// performance.
-			for (final NodesElement node : nodesToLayOut) {
-				CartesianLayoutElement nodeLayoutElement = new CartesianLayoutElement(node.getId(), currX, currY);
-				cxLayoutWriter.writeAspectElement(nodeLayoutElement);
+		// Set visual property.
+		// TODO: We need batch apply method for Visual Property values for
+		// performance.
+		for (final NodesElement node : nodesToLayOut) {
+			CartesianLayoutElement nodeLayoutElement = new CartesianLayoutElement(node.getId(), currX, currY);
+			cxLayoutWriter.writeAspectElement(nodeLayoutElement);
 
-				count++;
+			count++;
 
-				if (count == columns) {
-					count = 0;
-					currX = initialX;
-					currY += NODE_VERTICAL_SPACING;
-				} else {
-					currX += NODE_HORIZONTAL_SPACING;
-				}
+			if (count == columns) {
+				count = 0;
+				currX = initialX;
+				currY += NODE_VERTICAL_SPACING;
+			} else {
+				currX += NODE_HORIZONTAL_SPACING;
 			}
-			finishLayout();
-		} catch (IOException e) {
-			throw new RuntimeException("I/O Exception when writing CX file");
 		}
+		finishLayout();
 	}
 
 	@Override
-	protected void parseInput() {
+	protected void parseInput() throws IOException {
 		ArrayList<NodesElement> nodes = new ArrayList<NodesElement>();
 		while (cxNodeReader.hasNext()) {
 			List<AspectElement> aspectElements = cxNodeReader.getNext();
