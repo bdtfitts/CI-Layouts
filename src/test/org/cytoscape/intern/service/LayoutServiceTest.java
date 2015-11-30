@@ -20,6 +20,7 @@ import org.junit.Test;
 
 public class LayoutServiceTest {
 
+	@SuppressWarnings("resource")
 	public void generate(Generator generator) {
 		InputStream cxInput = ClassLoader.getSystemResourceAsStream("resources/cxInput.cx");
 		NodesFragmentReader nodesFragmentReader = NodesFragmentReader.createInstance();
