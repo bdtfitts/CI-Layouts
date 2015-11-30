@@ -46,7 +46,7 @@ public class LayoutService {
 
 		try {
 			CxReader cxReader;
-			CxWriter cxWriter = CxWriter.createInstance(cartesianLayout, true, writer);
+			CxWriter cxWriter = CxWriter.createInstance(cartesianLayout, false, writer);
 			//System.out.println("Applying layout...");
 			if (algorithm == null) {
 				algorithm = "null";

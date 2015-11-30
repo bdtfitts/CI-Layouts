@@ -20,8 +20,7 @@ import org.junit.Test;
 
 public class LayoutServiceTest {
 
-	@Test
-	public void test() {
+	public void generate(Generator generator) {
 		InputStream cxInput = ClassLoader.getSystemResourceAsStream("resources/cxInput.cx");
 		NodesFragmentReader nodesFragmentReader = NodesFragmentReader.createInstance();
 		HashSet<AspectFragmentReader> hashReader = new HashSet<AspectFragmentReader>();
@@ -40,9 +39,14 @@ public class LayoutServiceTest {
 			}
 			cxInput.close();
 
-			cxInput = ClassLoader.getSystemResourceAsStream("resources/cxInput.cx");
-			Generator directGenerator = new DirectGenerator();
-			InputStream cartesianResult= directGenerator.generateCartesianStream(cxInput, "grid");
+			if (generator instanceof DirectGenerator) {
+				cxInput = ClassLoader.getSystemResourceAsStream("resources/cxInput.cx");
+			} else if (generator instanceof RestGenerator) {
+				cxInput = ClassLoader.getSystemResourceAsStream("resources/cxRestInput.cx");
+			}
+			InputStream cartesianResult= generator.generateCartesianStream(cxInput, "grid");
+			
+			cxInput.close();
 
 			CartesianLayoutFragmentReader cartesianFragmentReader = CartesianLayoutFragmentReader.createInstance();
 			HashSet<AspectFragmentReader> cartReader = new HashSet<AspectFragmentReader>();
@@ -63,10 +67,14 @@ public class LayoutServiceTest {
 		} catch (IOException e) {
 			fail("Error");
 		}
-		
-		
-		
-		
+	}
+	@Test
+	public void testDirectGenSameNumberOfElements() {
+		generate(new DirectGenerator());
+	}
+	@Test
+	public void testRestGenSameNumberOfElements() {
+		generate(new RestGenerator());
 	}
 
 }
