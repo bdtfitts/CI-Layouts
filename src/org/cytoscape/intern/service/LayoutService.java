@@ -36,13 +36,6 @@ public class LayoutService {
 	}
 	public static void run(InputStream cxInput, String algorithm) {
 
-		NodesFragmentReader nodesFragmentReader = NodesFragmentReader.createInstance();
-		EdgesFragmentReader edgesFragmentReader = EdgesFragmentReader.createInstance();
-		CartesianLayoutFragmentWriter cartesianFragmentWriter = CartesianLayoutFragmentWriter.createInstance();
-
-		AspectFragmentWriter[] writerArray = {cartesianFragmentWriter};
-		List<AspectFragmentWriter> writers = Arrays.asList(writerArray);
-
 		FileOutputStream outputFileStream = null;
 		//Get the resources directory
 		URL url = ClassLoader.getSystemResource("resources/");
@@ -61,41 +54,56 @@ public class LayoutService {
 			throw new RuntimeException("Could not find the file to write to");
 		}
 
-		List<AspectFragmentReader> readers = new ArrayList<AspectFragmentReader>(2);
+		//Create necessary AspectFragmentReaders and AspectFragmentWriter
+		NodesFragmentReader nodesFragmentReader = NodesFragmentReader.createInstance();
+		EdgesFragmentReader edgesFragmentReader = EdgesFragmentReader.createInstance();
+		CartesianLayoutFragmentWriter cartesianFragmentWriter = CartesianLayoutFragmentWriter.createInstance();
+
+		//Prepare AspectFragmentWriter for bundling into CxReader object
+		HashSet<AspectFragmentWriter> writer = new HashSet<AspectFragmentWriter>(1);
+		writer.add(cartesianFragmentWriter);
+
+		//Prepare AspectFragmentReaders for bundling into CxReader object
+		HashSet<AspectFragmentReader> readers = new HashSet<AspectFragmentReader>(2);
 		readers.add(nodesFragmentReader);
 		readers.add(edgesFragmentReader);
+
 		try {
 			CxReader cxReader;
-			CxWriter cxWriter = CxWriter.createInstance(outputFileStream, true, new HashSet<AspectFragmentWriter>(writers));
+			CxWriter cxWriter = CxWriter.createInstance(outputFileStream, true, writer);
 			System.out.println("Applying layout...");
+			if (algorithm == null) {
+				algorithm = "null";
+			}
 			switch (algorithm) {
 				case GRID_LAYOUT: {
-					System.out.println("Creating cxReader...");
-					cxReader = CxReader.createInstance(cxInput, new HashSet<AspectFragmentReader>(readers));
-					System.out.println("Created cxReader.");
+					System.out.println("Grid layout");
+					cxReader = CxReader.createInstance(cxInput, readers);
 					cxWriter.start();
 					try {
 						applyLayout(new GridLayout(cxReader, cxWriter));
 						cxWriter.end(true, "Applied GridLayout to network");
 					} catch (IOException e) {
-						cxWriter.end(false, "Error when writing to file");
+						cxWriter.end(false, "Error when writing to file. " + e.getMessage());
 					}
 					break;
 				}
 				case STACKED_LAYOUT: {
+					System.out.println("Stacked Node layout");
 					CyVisualPropertiesFragmentReader vizPropFragmentReader = CyVisualPropertiesFragmentReader.createInstance();
 					readers.add(vizPropFragmentReader);
-					cxReader = CxReader.createInstance(cxInput, new HashSet<AspectFragmentReader>(readers));
+					cxReader = CxReader.createInstance(cxInput, readers);
 					cxWriter.start();
 					try {
 						applyLayout(new StackedNodeLayout(cxReader, cxWriter));
 						cxWriter.end(true, "Applied StackedNodeLayout to network");
 					} catch (IOException e) {
-						cxWriter.end(false, "Error when writing to file");
+						cxWriter.end(false, "Error when writing to file. " + e.getMessage());
 					}
 					break;
 				}
 				default: {
+					System.out.println("incompatible layout");
 					cxWriter.start();
 					cxWriter.end(true, "Unable to create layout in accordance to given algorithm");
 					break;
@@ -112,16 +120,4 @@ public class LayoutService {
 			} catch (IOException e) {}
 		}
 	}
-	public static void main(String[] args) {
-		if (args.length != 2) {
-			throw new IllegalArgumentException("Usage: java LayoutService [input file] [layout algorithm]");
-		}
-		String inputFilePath = args[0];
-		String algorithm = args[1];
-		InputStream cxInput = ClassLoader.getSystemResourceAsStream(inputFilePath);
-		System.out.println(String.format("Applying %s layout on network specified in %s", algorithm, inputFilePath));
-		run(cxInput, algorithm);
-		System.out.println(String.format("%s layout applied", algorithm));
-	}
-
 }
