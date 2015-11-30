@@ -1,17 +1,9 @@
 package org.cytoscape.intern.service;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.io.OutputStream;
 import java.util.HashSet;
 
 import org.cxio.aspects.readers.CyVisualPropertiesFragmentReader;
@@ -34,26 +26,10 @@ public class LayoutService {
 	private static void applyLayout(LayoutAlgorithm layout) throws IOException {
 		layout.apply();
 	}
-	public static void run(InputStream cxInput, String algorithm) {
+	public static OutputStream run(InputStream cxInput, String algorithm) {
 
-		FileOutputStream outputFileStream = null;
-		//Get the resources directory
-		URL url = ClassLoader.getSystemResource("resources/");
-		Path filePath = Paths.get(url.getPath(), "cxOutput.cx");
-		File file = filePath.toFile();
-		try {
-			if (!file.exists()) {
-				try {
-					file.createNewFile();
-				} catch (IOException e) {
-					throw new RuntimeException("Something went wrong with creating output file");
-				}
-			}
-			outputFileStream = new FileOutputStream(file);
-		} catch (FileNotFoundException e) {
-			throw new RuntimeException("Could not find the file to write to");
-		}
-
+		ByteArrayOutputStream cartesianLayout = new ByteArrayOutputStream();
+		
 		//Create necessary AspectFragmentReaders and AspectFragmentWriter
 		NodesFragmentReader nodesFragmentReader = NodesFragmentReader.createInstance();
 		EdgesFragmentReader edgesFragmentReader = EdgesFragmentReader.createInstance();
@@ -70,14 +46,14 @@ public class LayoutService {
 
 		try {
 			CxReader cxReader;
-			CxWriter cxWriter = CxWriter.createInstance(outputFileStream, true, writer);
-			System.out.println("Applying layout...");
+			CxWriter cxWriter = CxWriter.createInstance(cartesianLayout, true, writer);
+			//System.out.println("Applying layout...");
 			if (algorithm == null) {
 				algorithm = "null";
 			}
 			switch (algorithm) {
 				case GRID_LAYOUT: {
-					System.out.println("Grid layout");
+					//System.out.println("Grid layout");
 					cxReader = CxReader.createInstance(cxInput, readers);
 					cxWriter.start();
 					try {
@@ -89,7 +65,7 @@ public class LayoutService {
 					break;
 				}
 				case STACKED_LAYOUT: {
-					System.out.println("Stacked Node layout");
+					//System.out.println("Stacked Node layout");
 					CyVisualPropertiesFragmentReader vizPropFragmentReader = CyVisualPropertiesFragmentReader.createInstance();
 					readers.add(vizPropFragmentReader);
 					cxReader = CxReader.createInstance(cxInput, readers);
@@ -103,21 +79,15 @@ public class LayoutService {
 					break;
 				}
 				default: {
-					System.out.println("incompatible layout");
+					//System.out.println("incompatible layout");
 					cxWriter.start();
 					cxWriter.end(true, "Unable to create layout in accordance to given algorithm");
 					break;
 				}
 			}
+			return cartesianLayout;
 		} catch (IOException e) {
 			throw new RuntimeException("Unable to create CX Readers and/or Writers");
-		} finally {
-			try {
-				if (outputFileStream != null) {
-					outputFileStream.flush();
-					outputFileStream.close();
-				}
-			} catch (IOException e) {}
 		}
 	}
 }

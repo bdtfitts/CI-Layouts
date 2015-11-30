@@ -39,16 +39,17 @@ public class LayoutServiceTest {
 				}
 			}
 			cxInput.close();
+
 			cxInput = ClassLoader.getSystemResourceAsStream("resources/cxInput.cx");
 			Generator directGenerator = new DirectGenerator();
 			InputStream cartesianResult= directGenerator.generateCartesianStream(cxInput, "grid");
-			System.out.println(cartesianResult.toString());
+
 			CartesianLayoutFragmentReader cartesianFragmentReader = CartesianLayoutFragmentReader.createInstance();
 			HashSet<AspectFragmentReader> cartReader = new HashSet<AspectFragmentReader>();
 			cartReader.add(cartesianFragmentReader);
+
 			System.out.println("Reading created layout cx file");			
 			CxReader layoutReader = CxReader.createInstance(cartesianResult, cartReader);
-			System.out.println("Read layout cx file");
 			ArrayList<CartesianLayoutElement> layout = new ArrayList<CartesianLayoutElement>();
 			while (layoutReader.hasNext()) {
 				List<AspectElement> cartElements = layoutReader.getNext();
