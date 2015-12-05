@@ -30,26 +30,13 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class RestGenerator implements Generator {
 
 	@Override
-	public InputStream generateCartesianStream(InputStream cxNodeInputStream,
+	public InputStream generateCartesianStream(String cxNodeInputString,
 			String algorithm) {
 		InputStream cartesianLayout = null;
-		ByteArrayOutputStream inputNetwork = new ByteArrayOutputStream();
-		int next = 0;
-		while (next != -1) {
-			try {
-				next = cxNodeInputStream.read();
-			} catch (IOException e) {
-				e.printStackTrace();
-				throw new RuntimeException();
-			}
-			if (next != -1) {
-				inputNetwork.write(next);
-			}
-		}
 		CloseableHttpClient httpClient = HttpClients.createDefault();
 		HttpPost httpPost = new HttpPost("http://0.0.0.0/v1/services/layout");
 		try {
-			httpPost.setEntity(new StringEntity(String.format("{\"network\" : \"%s\", \"algorithm\" : \"%s\"}", inputNetwork.toString(), algorithm), ContentType.APPLICATION_JSON));
+			httpPost.setEntity(new StringEntity(String.format("{\"network\" : \"%s\", \"algorithm\" : \"%s\"}", cxNodeInputString, algorithm), ContentType.APPLICATION_JSON));
 		} catch (UnsupportedCharsetException e) {
 			e.printStackTrace();
 			throw new RuntimeException();
@@ -77,7 +64,7 @@ public class RestGenerator implements Generator {
 		}
 		String status = null;
 		do {
-			try { Thread.sleep(5000);
+			try { Thread.sleep(1000);
 			} catch (InterruptedException e) {
 			}
 			HttpGet httpGet = new HttpGet(String.format("http://0.0.0.0/v1/queue/%s", jobId));
@@ -101,7 +88,6 @@ public class RestGenerator implements Generator {
 			}
 		} while (!status.equals("finished"));
 		HttpGet httpGet = new HttpGet(String.format("http://0.0.0.0/v1/queue/%s/result", jobId));
-		String result = null;
 		try {
 			CloseableHttpResponse response = httpClient.execute(httpGet);
 			try {

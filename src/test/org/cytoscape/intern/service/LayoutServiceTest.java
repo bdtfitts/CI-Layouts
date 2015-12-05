@@ -3,8 +3,10 @@ package test.org.cytoscape.intern.service;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -22,12 +24,12 @@ public class LayoutServiceTest {
 
 	@SuppressWarnings("resource")
 	public void generate(Generator generator) {
-		InputStream cxInput = ClassLoader.getSystemResourceAsStream("resources/cxInput.cx");
+		InputStream cxInputStream = ClassLoader.getSystemResourceAsStream("resources/cxInput.cx");
 		NodesFragmentReader nodesFragmentReader = NodesFragmentReader.createInstance();
 		HashSet<AspectFragmentReader> hashReader = new HashSet<AspectFragmentReader>();
 		hashReader.add(nodesFragmentReader);
 		try {
-			CxReader cxReader = CxReader.createInstance(cxInput, hashReader);
+			CxReader cxReader = CxReader.createInstance(cxInputStream, hashReader);
 			
 			ArrayList<NodesElement> nodes = new ArrayList<NodesElement>();
 			while (cxReader.hasNext()) {
@@ -38,16 +40,28 @@ public class LayoutServiceTest {
 					}
 				}
 			}
-			cxInput.close();
+			cxInputStream.close();
 
+			StringBuilder cxInput = new StringBuilder();
 			if (generator instanceof DirectGenerator) {
-				cxInput = ClassLoader.getSystemResourceAsStream("resources/cxInput.cx");
+				cxInputStream = ClassLoader.getSystemResourceAsStream("resources/cxInput.cx");
+				BufferedReader cxInputReader = new BufferedReader(new InputStreamReader(cxInputStream));
+				String readString = null;
+				while ((readString = cxInputReader.readLine()) != null) {
+					cxInput.append(readString);
+				}
 			} else if (generator instanceof RestGenerator) {
-				cxInput = ClassLoader.getSystemResourceAsStream("resources/cxRestInput.cx");
+				cxInputStream = ClassLoader.getSystemResourceAsStream("resources/cxRestInput.cx");
+				BufferedReader cxInputReader = new BufferedReader(new InputStreamReader(cxInputStream));
+				String readString = null;
+				while ((readString = cxInputReader.readLine()) != null) {
+					cxInput.append(readString);
+				}
 			}
-			InputStream cartesianResult= generator.generateCartesianStream(cxInput, "grid");
+			System.out.println(cxInput.toString());
+			InputStream cartesianResult= generator.generateCartesianStream(cxInput.toString(), "grid");
 			
-			cxInput.close();
+			cxInputStream.close();
 
 			CartesianLayoutFragmentReader cartesianFragmentReader = CartesianLayoutFragmentReader.createInstance();
 			HashSet<AspectFragmentReader> cartReader = new HashSet<AspectFragmentReader>();
@@ -66,7 +80,7 @@ public class LayoutServiceTest {
 			}
 			assertTrue("Number of nodes does not equal number of layout elements", nodes.size() == layout.size());
 		} catch (IOException e) {
-			fail("Error");
+			fail("Error: " + e.getMessage());
 		}
 	}
 	@Test

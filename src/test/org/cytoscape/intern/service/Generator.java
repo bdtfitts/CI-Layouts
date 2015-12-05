@@ -9,5 +9,5 @@ import java.io.InputStream;
  *
  */
 public interface Generator {
-	public InputStream generateCartesianStream(InputStream cxNodeInputStream, String algorithm);
+	public InputStream generateCartesianStream(String string, String algorithm);
 }
